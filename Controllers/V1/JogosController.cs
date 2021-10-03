@@ -17,5 +17,34 @@ namespace ApiCatalogoJogos.Controllers.V1
             return Ok();
         }
 
+        [HttpGet("{idJogo:guid}")]
+        public async Task<ActionResult<object>> Obter(Guid idJogo)
+        {
+            return Ok();
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<object>> InserirJogo(object jogo)
+        {
+            return Ok();
+        }
+
+        [HttpPut("{idJogo:guid}")]
+        public async Task<ActionResult>AtualizarJogo(Guid idJogo, object jogo)
+        {
+            return Ok();
+        }
+
+        [HttpPatch("{idJogo:guid}/preço/{preço:double}")]
+        public async Task<ActionResult> AtualizarJogo(Guid idJogo, double precoJogo)
+        {
+            return Ok();
+        }
+
+        [HttpDelete("{idJogo:guid}")]
+        public async Task<ActionResult>ApagarJogo(Guid igJogo)
+        {
+            return Ok();
+        }
     }
 }
