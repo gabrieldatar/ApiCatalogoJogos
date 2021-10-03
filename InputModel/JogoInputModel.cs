@@ -18,7 +18,7 @@ namespace ApiCatalogoJogos.InputModel
 
         [Required]
         [Range(1,1000,ErrorMessage = "O preço do jogo deve conter entre 1 e no máximo 1000 da moeda nativa")]
-        public string Preco { get; set; }
+        public double Preco { get; set; }
 
     }
 }
