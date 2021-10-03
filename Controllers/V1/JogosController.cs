@@ -61,7 +61,6 @@ namespace ApiCatalogoJogos.Controllers.V1
             {
                 return UnprocessableEntity("Já exixte um jogo com este nome para esta produtora.");
             }
-            
         }
 
         [HttpPut("{idJogo:guid}")]
@@ -95,13 +94,22 @@ namespace ApiCatalogoJogos.Controllers.V1
             {
                 return NotFound("Não existe este jogo");
             }
-            
         }
 
         [HttpDelete("{idJogo:guid}")]
-        public async Task<ActionResult>ApagarJogo(Guid igJogo)
+        public async Task<ActionResult>ApagarJogo([FromRoute] Guid idJogo)
         {
-            return Ok();
+            try
+            {
+                await _jogoService.Remover(idJogo);
+
+                return Ok();
+            }
+            //catch(JogoNaoCadastradoException ex)
+            catch (Exception ex)
+            {
+                return NotFound("Não existe este jogo");
+            }
         }
     }
 }
