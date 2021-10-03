@@ -32,7 +32,7 @@ namespace ApiCatalogoJogos.Services
             entidadeJogo.Produtora = jogo.Produtora;
             entidadeJogo.Preco = jogo.Preco;
 
-            await _jogoRepository.Atualizarr(entidadeJogo);
+            await _jogoRepository.Atualizar(entidadeJogo);
         }
 
         public async Task Atualizar(Guid id, double preco)
@@ -46,7 +46,7 @@ namespace ApiCatalogoJogos.Services
 
             entidadeJogo.Preco = preco;
 
-            await _jogoRepository.Atualizarr(entidadeJogo);
+            await _jogoRepository.Atualizar(entidadeJogo);
         }
 
         public async Task<JogoViewModel> Inserir(JogoInputModel jogo)

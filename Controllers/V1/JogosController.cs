@@ -17,6 +17,7 @@ namespace ApiCatalogoJogos.Controllers.V1
     public class JogosController : ControllerBase
     {
         private readonly IJogoService _jogoService;
+
         public JogosController(IJogoService jogoService)
         {
             _jogoService = jogoService;
