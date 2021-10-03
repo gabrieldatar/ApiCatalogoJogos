@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using ApiCatalogoJogos.InputModel;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -24,13 +25,13 @@ namespace ApiCatalogoJogos.Controllers.V1
         }
 
         [HttpPost]
-        public async Task<ActionResult<object>> InserirJogo(object jogo)
+        public async Task<ActionResult<object>> InserirJogo(JogoInputModel jogo)
         {
             return Ok();
         }
 
         [HttpPut("{idJogo:guid}")]
-        public async Task<ActionResult>AtualizarJogo(Guid idJogo, object jogo)
+        public async Task<ActionResult>AtualizarJogo(Guid idJogo, JogoInputModel jogo)
         {
             return Ok();
         }
