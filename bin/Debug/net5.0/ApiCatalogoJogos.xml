@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ApiCatalogoJogos</name>
+    </assembly>
+    <members>
+        <member name="M:ApiCatalogoJogos.Controllers.V1.JogosController.Obter(System.Int32,System.Int32)">
+            <summary>
+            Busca todos os jogos de forma paginada
+            </summary>
+            <remarks>
+            Não é possível retornar os jogos sem paginação
+            </remarks>
+            <param name="pagina"></param>
+            <param name="quantidade"></param>
+            <response code="200">Retorna a lista de jogos</response>
+            <response code="200">Caso não haja jogos</response>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

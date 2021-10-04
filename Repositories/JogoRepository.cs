@@ -15,7 +15,7 @@ namespace ApiCatalogoJogos.Repositories
             {Guid.Parse("5e99c84a-108b-4dfa-ab7e-d8c55957a7ec"),new Jogo{Id=Guid.Parse("5e99c84a-108b-4dfa-ab7e-d8c55957a7ec"),Nome="Z na area",Produtora="O Z",Preco=120} },
             {Guid.Parse("da033439-f352-4539-879f-515759312d53"),new Jogo{Id=Guid.Parse("da033439-f352-4539-879f-515759312d53"),Nome="Z a festa",Produtora="O Z",Preco=210} },
             {Guid.Parse("92576bd2-388e-4f5d-96c1-8bfda6c5a268"),new Jogo{Id=Guid.Parse("92576bd2-388e-4f5d-96c1-8bfda6c5a268"),Nome="De tiro atirando",Produtora="Helenão",Preco=70} },
-            {Guid.Parse("c3c9b5da-6a45-4de1-b28b-491cbf83b589"),new Jogo{Id=Guid.Parse("c3c9b5da-6a45-4de1-b28b-491cbf83b589"),Nome="De voo na paz",Produtora="A 13",Preco=80} }
+            {Guid.Parse("c3c9b5da-6a45-4de1-b28b-491cbf83b589"),new Jogo{Id=Guid.Parse("c3c9b5da-6a45-4de1-b28b-491cbf83b589"),Nome="De voo na paz",Produtora="A 13",Preco=80} },
             {Guid.Parse("33d7837d-504d-48db-8e67-508d7e139205"),new Jogo{Id=Guid.Parse("33d7837d-504d-48db-8e67-508d7e139205"),Nome="Jogo Ruim",Produtora="Produtora boa",Preco=373} }
             
         };

@@ -13,6 +13,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using ApiCatalogoJogos.Repositories;
 using ApiCatalogoJogos.Services;
+using static ApiCatalogoJogos.Controllers.V1.CicloDeVidaIDController;
+using System.Reflection;
+using System.IO;
 
 namespace ApiCatalogoJogos
 {
@@ -34,12 +37,26 @@ namespace ApiCatalogoJogos
             //services.AddScoped<IJogoRepository, JogoRepository>();
             
             // Banco
-            services.AddScoped<IJogoRepository, JogoSqlServerRepository>(); 
+            services.AddScoped<IJogoRepository, JogoSqlServerRepository>();
+
+
+            #region CiclodeVida
+
+            services.AddSingleton<IExemploSingleton, ExemploCicloDeVida>();
+            services.AddScoped<IExemploScoped, ExemploCicloDeVida>();
+            services.AddTransient<IExemploTransient, ExemploCicloDeVida>();
+
+            #endregion
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ApiCatalogoJogos", Version = "v1" });
+
+                var basePath = AppDomain.CurrentDomain.BaseDirectory;
+                var fileName = typeof(Startup).GetTypeInfo().Assembly.GetName().Name + ".xml";
+                c.IncludeXmlComments(Path.Combine(basePath, fileName));
+
             });
         }
 

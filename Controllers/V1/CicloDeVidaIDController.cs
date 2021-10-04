@@ -73,11 +73,11 @@ namespace ApiCatalogoJogos.Controllers.V1
 
         }
 
-        public class ExemploCiclodeVida : IExemploSingleton, IExemploScoped, IExemploTransient
+        public class ExemploCicloDeVida : IExemploSingleton, IExemploScoped, IExemploTransient
         {
             private readonly Guid _guid;
 
-            public ExemploCiclodeVida()
+            public ExemploCicloDeVida()
             {
                 _guid = Guid.NewGuid();
             }
