@@ -29,7 +29,12 @@ namespace ApiCatalogoJogos
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<IJogoService, JogoService>();
-            services.AddScoped<IJogoRepository, JogoRepository>();
+            
+            // Memoria
+            //services.AddScoped<IJogoRepository, JogoRepository>();
+            
+            // Banco
+            services.AddScoped<IJogoRepository, JogoSqlServerRepository>(); 
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
