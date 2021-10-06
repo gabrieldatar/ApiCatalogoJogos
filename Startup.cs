@@ -13,6 +13,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using ApiCatalogoJogos.Repositories;
 using ApiCatalogoJogos.Services;
+using ApiCatalogoJogos.Middleware;
 using static ApiCatalogoJogos.Controllers.V1.CicloDeVidaIDController;
 using System.Reflection;
 using System.IO;
@@ -69,6 +70,8 @@ namespace ApiCatalogoJogos
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ApiCatalogoJogos v1"));
             }
+
+            app.UseMiddleware<ExceptionMiddleware>();
 
             app.UseHttpsRedirection();
 
